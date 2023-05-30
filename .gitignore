@@ -1,4 +1,3 @@
-index.old.html
-*.zip
-base assets/**
+.ignore/**
 .htaccess
+*.zip

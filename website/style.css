@@ -21,6 +21,7 @@ img {
 	display: block;
 	margin: 0 auto;
 	user-select: none;
+	pointer-events: none;
 }
 
 div.bar {

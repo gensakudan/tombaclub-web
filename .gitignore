@@ -1,3 +1,4 @@
 index.old.html
 *.zip
 base assets/**
+.htaccess

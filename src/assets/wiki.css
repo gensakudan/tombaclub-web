@@ -1,0 +1,52 @@
+.mw-parser-output {
+    margin: 0 auto;
+    padding: 8px 16px;
+    max-width: 1000px;
+}
+
+.mw-editsection {
+    display: none;
+}
+
+.wikitable {
+    border: 1px solid #0000007f;
+    margin-bottom: 2em;
+}
+
+.wikitable th, .wikitable td {
+    padding: 8px;
+    border: 1px solid #0000007f;
+}
+
+.wikitable th {
+    background-color: #0000003f;
+}
+
+.wikitable td {
+    background-color: #0000000f;
+}
+
+.mw-editsection h3 {
+    margin-top: 0;
+}
+
+#toc {
+    display: none;
+}
+
+.gallery {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+}
+
+.gallerybox {
+    border: 1px solid #0000007f;
+    background-color: #0000000f;
+}
+
+.gallerybox div.thumb {
+    margin-left: auto;
+    margin-right: auto;
+}

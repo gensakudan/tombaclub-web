@@ -20,11 +20,11 @@
 				<img src="/assets/img/wiki.png" width="460" height="290">
 				Tomba Wiki!
 			</a>
-			<a href="/wiki/Interviews">
+			<a href="/interviews.html">
 				<img src="/assets/img/interview.png" width="460" height="290">
 				Interviews
 			</a>
-			<a href="/wiki/List_of_Tomba_promotional_goodies">
+			<a href="/merch.html">
 				<img src="/assets/img/merch.png" width="460" height="290">
 				Merch We Found
 			</a>

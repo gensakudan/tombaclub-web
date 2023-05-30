@@ -18,14 +18,14 @@ var Tomba = new class {
 		if (this.shock) {
 			this.e.classList.remove('hover');
 			this.e.classList.add('shock');
-			this.e.src = 'website/fm3.gif';
+			this.e.src = '/website/fm3.gif';
 		} else if (this.hover) {
 			this.e.classList.remove('shock');
 			this.e.classList.add('hover');
-			this.e.src = 'website/fm2.gif';
+			this.e.src = '/website/fm2.gif';
 		} else {
 			this.e.classList.remove('hover', 'shock');
-			this.e.src = 'website/fm.gif';
+			this.e.src = '/website/fm.gif';
 		}
 	}
 	

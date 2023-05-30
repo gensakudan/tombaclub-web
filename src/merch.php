@@ -19,6 +19,7 @@
         <a href="/wiki/List_of_Tomba_promotional_goodies">See this page on the Wiki</a><br><br>
             <a href="/">Back to Index</a>
         </p>
+        <img src="/assets/img/uc.gif">
 		<footer>
 			<small>
 				Tomba! &copy; 1997-2000 Whoopee Camp Co. Ltd.<br>

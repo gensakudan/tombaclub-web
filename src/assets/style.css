@@ -7,7 +7,7 @@ html, body {
 }
 
 body {
-	background-image: url("bg_stars.png");
+	background-image: url("/assets/img/bg_stars.png");
 	background-color: #FECB31;
 	font-family: "Times New Roman", "MS Mincho", serif;
 	font-size: 14pt;
@@ -26,14 +26,14 @@ img {
 
 div.bar {
 	height: 57px;
-	background-image: url("bar.png");
+	background-image: url("/assets/img/bar.png");
 	position: sticky;
 	top: 0;
 	image-rendering: pixelated;
 }
 
 bar1, bar2, bar3 {
-	background-image: url("bar2.png");
+	background-image: url("/assets/img/bar2.png");
 }
 
 bar1 {

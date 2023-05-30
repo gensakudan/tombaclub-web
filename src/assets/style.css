@@ -76,25 +76,32 @@ bar3 {
 	}
 }
 
-img#tomba-gif {
+div#tomba-gif {
 	position: fixed;
 	bottom: 0;
 	right: 32px;
+	width: 92px;
+	height: 94px;
+}
+
+div#tomba-gif img {
+	position: absolute;
+	bottom: 0;
 	image-rendering: pixelated;
 }
 
-img#tomba-gif.hover {
+div#tomba-gif img.hover {
 	bottom: -4px;
 }
 
 @media (max-width: 545px) {
-	img#tomba-gif {
+	div#tomba-gif {
 		right: 0 !important;
 	}
 }
 
 @media (max-width: 475px) {
-	img#tomba-gif {
+	div#tomba-gif {
 		display: none !important;
 	}
 }

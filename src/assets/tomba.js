@@ -1,18 +1,8 @@
 var Tomba = new class {
 	hover = false;
 	shock = false;
-	bbox  = {x: 92, y: 94};
-	e = document.getElementById('tomba-gif');
-	
-	mouseCollision(mouse) {
-		if (window.innerWidth <= 475 || mouse.x === undefined || mouse.y === undefined) return false;
-		var x = window.innerWidth - getComputedStyle(this.e).getPropertyValue('right').replace(/\D/g,'') - this.bbox.x,
-		    y = window.innerHeight - this.bbox.y;
-		return (
-			mouse.x >= x && mouse.x < x + this.bbox.x &&
-			mouse.y >= y && mouse.y < y + this.bbox.y
-		);
-	}
+	bbox  = document.getElementById('tomba-gif');
+	e     = this.bbox.childNodes[0];
 	
 	update() {
 		if (this.shock) {
@@ -47,11 +37,14 @@ var Tomba = new class {
 var mouse = {x: undefined, y: undefined};
 var collide = false;
 
-window.addEventListener('mousemove', (event) => {
-	mouse = {x: event.clientX, y: event.clientY};
-	collide = Tomba.mouseCollision(mouse);
-	Tomba.setHover(collide);
-	if (!collide) Tomba.setShock(false);
+Tomba.bbox.addEventListener('mouseenter', () => {
+	collide = true;
+	Tomba.setHover(true);
+});
+Tomba.bbox.addEventListener('mouseleave', () => {
+	collide = false;
+	Tomba.setHover(false);
+	Tomba.setShock(false);
 });
 window.addEventListener('mousedown', (event) => Tomba.setShock(collide && event.button == 0));
 window.addEventListener('mouseup', () => Tomba.setShock(false));

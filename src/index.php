@@ -9,7 +9,7 @@
 	</head>
 	<body>
 		<div class="bar"><bar1><bar2></bar2><bar3></bar3></bar1></div>
-		<img src="/assets/img/fm.gif" id="tomba-gif">
+		<div id="tomba-gif"><img src="/assets/img/fm.gif"></div>
 		<img src="/assets/img/TcL.png" width="500" height="500">
 		<p>
 			Welcome to the TOMBA CLUB website on the interwebs!<br><br>

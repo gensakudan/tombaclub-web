@@ -1,3 +1,4 @@
+<?php include_once('assets/messages.php'); ?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -15,6 +16,7 @@
 			Welcome to the TOMBA CLUB website on the interwebs!<br><br>
 			Where do you want to go today?
 		</p>
+		<div class="marquee"><p><?= $messages[rand(0, count($messages)-1)] ?></p></div>
 		<menu>
 			<a href="/wiki/Main_Page">
 				<img src="/assets/img/wiki.png" width="460" height="290">
@@ -43,5 +45,6 @@
 			</small>
 		</footer>
 		<script src="/assets/tomba.js"></script>
+		<script src="/assets/marquee.js"></script>
 	</body>
 </html>

@@ -115,6 +115,21 @@ p {
 	margin-bottom: 2em;
 }
 
+div.marquee {
+	overflow: hidden;
+	position: relative;
+	margin: 0 auto 2em;
+	max-width: 1200px;
+	height: 25px;
+}
+
+div.marquee p {
+	position: absolute;
+	margin: 0;
+	text-align: left;
+	transform: translateX(1200px);
+}
+
 menu {
 	list-style-type: none;
 	margin: 0 auto;

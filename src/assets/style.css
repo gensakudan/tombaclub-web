@@ -1,109 +1,109 @@
 html, body {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	height: 100%;
-	line-break: strict;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    height: 100%;
+    line-break: strict;
 }
 
 body {
-	background-image: url("/assets/img/bg_stars.png");
-	background-color: #FECB31;
-	font-family: "Times New Roman", "MS Mincho", serif;
-	font-size: 14pt;
-	height: auto;
+    background-image: url("/assets/img/bg_stars.png");
+    background-color: #FECB31;
+    font-family: "Times New Roman", "MS Mincho", serif;
+    font-size: 14pt;
+    height: auto;
 }
 
 img {
-	max-width: 100%;
-	height: auto;
-	vertical-align: top;
-	display: block;
-	margin: 0 auto;
-	user-select: none;
-	pointer-events: none;
+    max-width: 100%;
+    height: auto;
+    vertical-align: top;
+    display: block;
+    margin: 0 auto;
+    user-select: none;
+    pointer-events: none;
 }
 
 div.bar {
-	height: 57px;
-	background-image: url("/assets/img/bar.png");
-	position: sticky;
-	top: 0;
-	image-rendering: pixelated;
+    height: 57px;
+    background-image: url("/assets/img/bar.png");
+    position: sticky;
+    top: 0;
+    image-rendering: pixelated;
 }
 
 bar1, bar2, bar3 {
-	background-image: url("/assets/img/bar2.png");
+    background-image: url("/assets/img/bar2.png");
 }
 
 bar1 {
-	width: 100%;
-	max-width: 636px;
-	height: 57px;
-	min-height: 57px;
-	margin: 0 auto;
-	display: block;
-	position: relative;
+    width: 100%;
+    max-width: 636px;
+    height: 57px;
+    min-height: 57px;
+    margin: 0 auto;
+    display: block;
+    position: relative;
 }
 
 bar2, bar3 {
-	display: inline-block;
-	position: absolute;
+    display: inline-block;
+    position: absolute;
 }
 
 bar2 {
-	width: 21px;
-	height: 28px;
-	min-width: 21px;
-	min-height: 28px;
-	background-position: -562px -29px;
-	top: 29px;
-	right: 52px;
+    width: 21px;
+    height: 28px;
+    min-width: 21px;
+    min-height: 28px;
+    background-position: -562px -29px;
+    top: 29px;
+    right: 52px;
 }
 
 bar3 {
-	width: 52px;
-	height: 57px;
-	min-width: 52px;
-	min-height: 57px;
-	background-position: -583px 0;
-	right: 0;
+    width: 52px;
+    height: 57px;
+    min-width: 52px;
+    min-height: 57px;
+    background-position: -583px 0;
+    right: 0;
 }
 
 @media (max-width: 396px) {
-	div.bar {
-		display: none !important;
-	}
+    div.bar {
+        display: none !important;
+    }
 }
 
 div#tomba-gif {
-	position: fixed;
-	bottom: 0;
-	right: 32px;
-	width: 92px;
-	height: 94px;
+    position: fixed;
+    bottom: 0;
+    right: 32px;
+    width: 92px;
+    height: 94px;
 }
 
 div#tomba-gif img {
-	position: absolute;
-	bottom: 0;
-	image-rendering: pixelated;
+    position: absolute;
+    bottom: 0;
+    image-rendering: pixelated;
 }
 
 div#tomba-gif img.hover {
-	bottom: -4px;
+    bottom: -4px;
 }
 
 @media (max-width: 545px) {
-	div#tomba-gif {
-		right: 0 !important;
-	}
+    div#tomba-gif {
+        right: 0 !important;
+    }
 }
 
 @media (max-width: 475px) {
-	div#tomba-gif {
-		display: none !important;
-	}
+    div#tomba-gif {
+        display: none !important;
+    }
 }
 
 h1, h2 {
@@ -111,51 +111,51 @@ h1, h2 {
 }
 
 p {
-	text-align: center;
-	margin-bottom: 2em;
+    text-align: center;
+    margin-bottom: 2em;
 }
 
 div.marquee {
-	overflow: hidden;
-	position: relative;
-	margin: 0 auto 2em;
-	max-width: 1200px;
-	height: 25px;
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto 2em;
+    max-width: 1200px;
+    height: 25px;
 }
 
 div.marquee p {
-	position: absolute;
-	margin: 0;
-	text-align: left;
-	transform: translateX(1200px);
+    position: absolute;
+    margin: 0;
+    text-align: left;
+    transform: translateX(1200px);
 }
 
 menu {
-	list-style-type: none;
-	margin: 0 auto;
-	padding: 0;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-evenly;
+    list-style-type: none;
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
 menu a {
-	text-align: center;
-	margin-bottom: 1em;
+    text-align: center;
+    margin-bottom: 1em;
 }
 
 menu a img {
-	display: block;
+    display: block;
 }
 
 /* Un-comment this once we have 4 menu items again
 @media (max-width: 1839px) {
-	menu {
-		max-width: 920px !important;
-	}
+    menu {
+        max-width: 920px !important;
+    }
 }
 */
 
 footer {
-	text-align: center;
+    text-align: center;
 }

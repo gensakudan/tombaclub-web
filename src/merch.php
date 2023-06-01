@@ -3,8 +3,8 @@
 <html>
     <head>
         <link rel="icon" href="/resources/favicon-512x512.png">
-        <link rel="stylesheet" href="/assets/style.css">
-        <link rel="stylesheet" href="/assets/wiki.css">
+        <link rel="stylesheet" href="/assets/css/style.css">
+        <link rel="stylesheet" href="/assets/css/wiki.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="UTF-8">
         <title>Merch We Found - ♥TOMBA CLUB!♥</title>
@@ -26,6 +26,6 @@
                 &copy; 2023 TOMBA CLUB (Please don’t sue us, Tokuro!)
             </small>
         </footer>
-        <script src="/assets/tomba.js"></script>
+        <script src="/assets/js/tomba.js"></script>
     </body>
 </html>

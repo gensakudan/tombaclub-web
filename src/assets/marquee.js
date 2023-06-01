@@ -1,14 +1,13 @@
 const marquee = document.querySelector('.marquee');
-const style = document.styleSheets[0];
-const rule = [...style.cssRules].find((r) => r.selectorText === 'div.marquee p');
-const delay = 160;
+const rule    = [...document.styleSheets[0].cssRules].find((r) => r.selectorText === 'div.marquee p');
+const delay   = 160;
+const textW   = window.getComputedStyle(marquee.firstChild).getPropertyValue('width').replace(/[^\d.-]/g, '');
+const marqGetWidth = () => window.getComputedStyle(marquee).getPropertyValue('width').replace(/[^\d.-]/g, '');
 
-var textX = window.getComputedStyle(marquee).getPropertyValue('width').replace(/[^\d.-]/g, ''),
-    textW = window.getComputedStyle(marquee.firstChild).getPropertyValue('width').replace(/[^\d.-]/g, ''),
-    marqueeW = textX;
+var textX = marqueeW = marqGetWidth();
 
 setInterval(function() {
-    marqueeW = window.getComputedStyle(marquee).getPropertyValue('width').replace(/[^\d.-]/g, '');
+    marqueeW = marqGetWidth();
     textX -= 8;
     if (textX < -textW - delay) textX += parseInt(marqueeW) + parseInt(textW) + delay;
     rule.style.setProperty('transform', 'translateX(' + textX.toString() + 'px)');

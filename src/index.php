@@ -16,7 +16,7 @@
             Welcome to the TOMBA CLUB website on the interwebs!<br><br>
             Where do you want to go today?
         </p>
-        <div class="marquee"><p><?= str_replace(' ', '&nbsp;', $messages[rand(0, count($messages)-1)]) ?></p></div>
+        <div class="marquee"><p><?= msg_format($messages[rand(0, count($messages)-1)]) ?></p></div>
         <menu>
             <a href="/wiki/Main_Page">
                 <img src="/assets/img/wiki.png" width="460" height="290">

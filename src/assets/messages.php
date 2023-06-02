@@ -21,6 +21,7 @@ $messages = [
     'We need to add that to the TCRF page!',
     '80 or 81?',
     'Pog Bag',
-    'Kainen was the 10-quadrillion-year-old man all along!'
+    'Kainen was the 10-quadrillion-year-old man all along!',
+    'I would really prefer if you would be quiet.'
 ];
 ?>

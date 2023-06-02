@@ -127,7 +127,9 @@ div.marquee p {
     position: absolute;
     margin: 0;
     text-align: left;
-    transform: translateX(1200px);
+    white-space: nowrap;
+    display: inline-block;
+    left: 1200px;
 }
 
 menu {

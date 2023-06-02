@@ -10,5 +10,5 @@ setInterval(function() {
     marqueeW = marqGetWidth();
     textX -= 8;
     if (textX < -textW - delay) textX += parseInt(marqueeW) + parseInt(textW) + delay;
-    rule.style.setProperty('transform', 'translateX(' + textX.toString() + 'px)');
+    rule.style.setProperty('left', textX.toString() + 'px');
 }, 100);

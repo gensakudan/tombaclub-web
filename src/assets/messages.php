@@ -12,6 +12,7 @@ $messages = [
     '80 or 81?',
     'Pog Bag',
     'Kainen was the 10-quadrillion-year-old man all along!',
-    'I would really prefer if you would be quiet.'
+    'I would really prefer if you would be quiet.',
+    'Alright, we’re in the mango zone!'
 ];
 ?>

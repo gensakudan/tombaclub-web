@@ -1,0 +1,54 @@
+.page-form .submission-form {
+  margin: auto;
+}
+.page-form .submission-form td:first-child {
+  font-weight: bold;
+  white-space: nowrap;
+}
+.page-form .submission-form .sub {
+  font-size: smaller;
+  margin-top: 0.25em;
+  display: block;
+}
+
+.page-form .submission-form input[type="text"],
+.page-form .submission-form input[type="email"] {
+  min-width: 25em;
+}
+.page-form .submission-form textarea {
+  min-width: 25em;
+  min-height: 5em;
+}
+.page-form .submission-form .preview.multiline {
+  white-space: break-spaces;
+}
+.page-form .submission-form .final-submit {
+  font-size: larger;
+  background: #e776a9;
+  color: white;
+  border: none;
+  border-radius: 0.25em;
+  padding: 0.25em 0.5em;
+  margin-bottom: 0.5em;
+}
+.page-form .submission-form .final-submit:hover {
+  background-color: #8c2550;
+  cursor: pointer;
+}
+.page-form .submission-form .submission-overview td {
+  background: rgba(0, 0, 0, 0.75);
+  color: white;
+}
+.page-form .submission-form .submission-overview td a {
+  color: #ff3f95;
+}
+.page-form .submission-form .submission-overview td.comments {
+  font-weight: normal;
+  font-size: smaller;
+}
+.page-form .submission-form .submission-overview td.comments .prefix {
+  color: #ffc001;
+}
+.page-form .submission-form .submission-overview .thumbsup {
+  filter: hue-rotate(-70deg) brightness(0.8) contrast(1.7);
+}

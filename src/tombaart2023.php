@@ -252,6 +252,26 @@ function get_submit_form($data = []) {
 </div>
 <?php
 }
+function replace_youtube_urls($text) {
+    $pattern = '/\(\(youtube:([a-zA-Z0-9_-]+)\)\)/i';
+    
+    $text = preg_replace_callback($pattern, function ($matches) {
+        $video_id = $matches[1];
+        return '
+            <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube-nocookie.com/embed/'.$video_id.'"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+            </iframe>
+        ';
+    }, $text);
+
+    return $text;
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -270,7 +290,7 @@ function get_submit_form($data = []) {
         
         <h1>Tomba Art Contest 2023</h1>
         <h2>#TombaArt2023</h2>
-        <?= $json['parse']['text'] ?>
+        <?= replace_youtube_urls($json['parse']['text']) ?>
         <?php
         if ($admin_code === 'imtherealtomba') {
             print(get_all_submissions());

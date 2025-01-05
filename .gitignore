@@ -1,3 +1,4 @@
 .ignore/**
 .htaccess
 *.zip
+*_db.json

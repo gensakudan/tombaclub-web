@@ -161,3 +161,24 @@ menu a img {
 footer {
     text-align: center;
 }
+
+@media (max-width: 767px) {
+    .desktop {
+        display: none;
+    }
+    .mobile {
+        display: block;
+    }
+}
+
+@media (min-width: 768px) {
+    .desktop {
+        display: block;
+    }
+    .desktop.table-cell {
+        display: table-cell;
+    }
+    .mobile {
+        display: none;
+    }
+}

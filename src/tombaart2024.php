@@ -1,4 +1,4 @@
-<?php $json = json_decode(file_get_contents('https://tomba.club/w/api.php?action=parse&page=Tomba_Wiki:TombaArt2023_Information&prop=text&formatversion=2&format=json'), true); ?>
+<?php $json = json_decode(file_get_contents('https://tomba.club/w/api.php?action=parse&page=Tomba_Wiki:TombaArt2024_Information&prop=text&formatversion=2&format=json'), true); ?>
 <?php
 $form_data = $_POST;
 $form_step = isset($form_data['step']) ? $form_data['step'] : 'start';
@@ -6,9 +6,9 @@ $admin_code = isset($_GET['admin_code']) ? $_GET['admin_code'] : '';
 
 function get_submissions_filename($backup = false) {
     if ($backup === false) {
-        return 'data/tombaart2023_db.json';
+        return 'data/tombaart2024_db.json';
     }
-    return 'data/tombaart2023_db_'.date('Ymd_H').'.json';
+    return 'data/tombaart2024_db_'.date('Ymd_H').'.json';
 }
 
 function save_data_to_db($data) {
@@ -45,7 +45,7 @@ function get_all_submissions() {
         <table class="wikitable submission-form">
             <tbody>
                 <tr>
-                    <th colspan="5">All #TombaArt2023 Submissions</th>
+                    <th colspan="5">All #TombaArt2024 Submissions</th>
                 </tr>
                 <?php
                 if (count($submissions_data['submissions']) === 0) {
@@ -113,7 +113,7 @@ function get_submit_preview($data = []) {
             <table class="wikitable submission-form">
                 <tbody>
                     <tr>
-                        <th colspan="2">#TombaArt2023 Submission Form</th>
+                        <th colspan="2">#TombaArt2024 Submission Form</th>
                     </tr>
                     <tr>
                         <td colspan="2">Please preview your data and hit "submit" if it looks correct.</td>
@@ -188,9 +188,13 @@ function get_submit_preview($data = []) {
 }
 function get_success_message($data = []) {
 ?>
-    <div class="mw-parser-output">
-        <p>You did it bro 😭</p>
-    </div>
+    <table class="wikitable submission-form">
+        <tbody>
+            <tr>
+                <th style="font-size: 2em;">You did it bro 😭</th>
+            </tr>
+        </tbody>
+    </table>
 <?php
 }
 function get_submit_form($data = []) {
@@ -201,37 +205,41 @@ function get_submit_form($data = []) {
         <table class="wikitable submission-form">
             <tbody>
                 <tr>
-                    <th colspan="2">#TombaArt2023 Submission Form</th>
+                    <th colspan="2">#TombaArt2024 Submission Form</th>
                 </tr>
                 <tr>
-                    <td>Name:</td>
+                    <td class="desktop table-cell">Name:</td>
                     <td>
+                        <b class="mobile">Name:</b>
                         <input type="text" name="name" required="required" <?= form_value('name', $data) ?> />
                     </td>
                 </tr>
                 <tr>
-                    <td>Submission link:</td>
+                    <td class="desktop table-cell">Submission link:</td>
                     <td>
+                        <b class="mobile">Submission link:</b>
                         <input type="text" name="submission" required="required" <?= form_value('submission', $data) ?> />
                         <div class="sub">Post your submission on any site (Twitter, Mastodon, etc) and link it here.<br>If you want to post via Discord, please join the <a href="https://discord.gg/zx45UfVP5t">Tomba Club Discord</a> and post it there.</div>
                     </td>
                 </tr>
                 <tr>
-                    <td>Email:</td>
+                    <td class="desktop table-cell">Email:</td>
                     <td>
+                        <b class="mobile">Email:</b>
                         <input type="email" name="email" <?= form_value('email', $data) ?> />
                         <div class="sub">Email address where we can contact you. If your art is posted on a social media site, this is optional as we will contact you there.</div>
                     </td>
                 </tr>
                 <tr>
-                    <td>Comments:</td>
+                    <td class="desktop table-cell">Comments:</td>
                     <td>
+                        <b class="mobile">Comments:</b>
                         <textarea id="description" name="description"><?= form_value('description', $data, false) ?></textarea>
                         <div class="sub">Any additional things we should know, or things you'd like to mention.</div>
                     </td>
                 </tr>
                 <tr>
-                    <td></td>
+                    <td class="desktop table-cell"></td>
                     <td>
                         <label>
                             <input type="checkbox" name="agree" value="yes" <?= form_value('agree', $data) ?> required="required" />
@@ -241,7 +249,7 @@ function get_submit_form($data = []) {
                     </td>
                 </tr>
                 <tr>
-                    <td></td>
+                    <td class="desktop table-cell"></td>
                     <td>
                         <button type="submit" name="step" value="preview">Preview submission</button>
                     </td>
@@ -272,24 +280,45 @@ function replace_youtube_urls($text) {
 
     return $text;
 }
+function add_embed_resize_handler() {
+?>
+<script>
+function addIframeHandler() {
+    function resizeIframes() {
+        var iframes = document.querySelectorAll('iframe[src*="youtube-nocookie.com/embed/"]');
+        iframes.forEach(function (iframe) {
+            const containerWidth = iframe.parentElement.clientWidth;
+            const newHeight = containerWidth * 9 / 16;
+            iframe.style.width = containerWidth + "px";
+            iframe.style.height = newHeight + "px";
+        });
+    }
+
+    window.addEventListener("resize", resizeIframes);
+    resizeIframes();
+}
+addIframeHandler();
+</script>
+<?php
+}
 ?>
 <!DOCTYPE html>
 <html>
     <head>
         <link rel="icon" href="/resources/favicon-512x512.png">
         <link rel="stylesheet" href="/assets/css/style.css">
-        <link rel="stylesheet" href="/assets/css/pages.css">
+        <link rel="stylesheet" href="/assets/css/pages.css?v2">
         <link rel="stylesheet" href="/assets/css/wiki.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="UTF-8">
-        <title>#TombaArt2023 Contest - ♥TOMBA CLUB!♥</title>
+        <title>#TombaArt2024 Contest - ♥TOMBA CLUB!♥</title>
     </head>
     <body class="page-form">
         <div class="bar"><bar1><bar2></bar2><bar3></bar3></bar1></div>
         <div id="tomba-gif"><img src="/assets/img/fm.gif"></div>
         
-        <h1>Tomba Art Contest 2023</h1>
-        <h2>#TombaArt2023</h2>
+        <h1>Tomba Art Contest 2024</h1>
+        <h2>#TombaArt2024</h2>
         <?= replace_youtube_urls($json['parse']['text']) ?>
         <?php
         if ($admin_code === 'imtherealtombaoQ6zwnXL7NDSf') {
@@ -301,6 +330,7 @@ function replace_youtube_urls($text) {
         } else if ($form_step === 'start' || $form_step === 'edit') {
             print(get_submit_form($form_data));
         }
+        print(add_embed_resize_handler());
         ?>
         <p>
             <a href="/">Back to Index</a>
@@ -308,7 +338,7 @@ function replace_youtube_urls($text) {
         <footer>
             <small>
                 Tomba! &copy; 1997-2000 Whoopee Camp Co. Ltd.<br>
-                &copy; 2023 TOMBA CLUB (Please don’t sue us, Tokuro!)
+                &copy; 2024 TOMBA CLUB (Please don’t sue us, Tokuro!)
             </small>
         </footer>
         <script src="/assets/js/tomba.js"></script>
